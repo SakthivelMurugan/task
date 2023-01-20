@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sakthi</title>
+    </head>
+    <body>
+        {{data2}}
+
+        <form method="post">
+            <input name="id" placeholder="enter id of the bank" required="1">
+            <input type="submit">
+        </form>
+        <table border="1">
+            <h1>fund details</h1>
+            <tr>
+                <th>scheme code</th>
+                <th>scheme name</th>
+                <th>nav</th>
+            </tr>
+            {%for i in data2%}
+            <tr>
+                <td>{{i.get("scheme_code")}}</td>
+                <td>{{i.get("scheme_name")}}</td>
+                <td>{{i.get("nav")}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </body>
+</html>
